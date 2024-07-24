@@ -1,16 +1,16 @@
 import os
 
 from langchain_community.llms import Ollama
-from langchain.document_loaders import UnstructuredFileLoader
 from langchain_community.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.document_loaders import UnstructuredFileLoader
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import RetrievalQA
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 llm = Ollama(
     model="llama3:latest",
-    temprature=0
+    temperature=0.7
 )
 
 embeddings = HuggingFaceEmbeddings()

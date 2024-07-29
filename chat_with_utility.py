@@ -10,7 +10,7 @@ from langchain.chains import RetrievalQA
 working_dir = os.path.dirname(os.path.abspath(__file__))
 llm = Ollama(
     model="llama3:latest",
-    temperature=0.7
+    temperature=0
 )
 
 embeddings = HuggingFaceEmbeddings()
